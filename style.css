@@ -1,12 +1,53 @@
 body {
-    background-color: #313233;
+    --color-primary: #e600e6;
+    --color-bg: #3d213d;
     color: antiquewhite;
     position:absolute;
     left: 50%;
     transform: translate(-50%, 50%);
     width: 60%;
+    font-size: 20pt !important;
 }
 
+
 h1 {
-    padding-bottom: 10pt;
+    margin-bottom: 10pt;
 }
+
+
+.container {
+    background-color: var(--color-bg);
+    border-color: var(--color-primary);
+    border-radius: 5px;
+    padding: 5em;
+}
+
+
+a {
+    font-size: 30pt !important;
+    text-decoration: underline !important;
+    text-decoration-color: var(--color-primary) !important;
+}
+
+
+/* Chessboard background */
+body {
+    --chess-size: 80px;
+    background: repeating-conic-gradient(
+    black 0deg 25%,
+    antiquewhite 25% 50%,
+    black 50% 75%,
+    antiquewhite 75% 100%);
+    background-size: var(--chess-size) var(--chess-size);
+    animation: scroll 4s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: calc(-4*var(--chess-size)) calc(-3*var(--chess-size));
+    }
+  }
+  
