@@ -1,27 +1,24 @@
+@import url("all.min.css");
+
+
 body {
     --color-primary: #e600e6;
-    --color-bg: #3d213d;
+    --color-bg: #201020f3;
     color: antiquewhite;
-    position:absolute;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    width: 60%;
     font-size: 20pt !important;
 }
 
-
-h1 {
-    margin-bottom: 10pt;
-}
-
-
-.container {
+.site {
     background-color: var(--color-bg);
     border-color: var(--color-primary);
-    border-radius: 5px;
+    border-radius: 5vmin !important;
+    border-style: dashed;
+    border-width: 0.5vmin;
     padding: 5em;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 25%);
 }
-
 
 a {
     font-size: 30pt !important;
@@ -43,11 +40,6 @@ body {
 }
 
 @keyframes scroll {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: calc(-4*var(--chess-size)) calc(-3*var(--chess-size));
-    }
+    from { background-position: 0 0;}
+    to { background-position: calc(-4*var(--chess-size)) calc(-3*var(--chess-size)); }
   }
-  
