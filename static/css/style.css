@@ -30,9 +30,9 @@ body {
     padding: 5%;
 }
 
-a {
-    font-size: 30pt !important;
-    text-decoration: underline !important;
+
+
+.text-decoration-underline {
     text-decoration-color: var(--color-primary) !important;
 }
 
