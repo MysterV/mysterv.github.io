@@ -1,25 +1,33 @@
 @import url("all.min.css");
 
-
-body {
+:root {
     --color-primary: #e600e6;
     --color-bg: #201020f3;
-    color: antiquewhite;
-    font-size: 20pt !important;
+    /* Checkerboard background */
+    --chess-size: 80px;
+    --chess-color1: black;
+    --chess-color2: var(--color-primary);
+    font-size: 18pt;
 }
 
-.site {
+body {
+    height: 80vh;
+    width: max(250px, 60vw);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: antiquewhite;
+
     background-color: var(--color-bg);
-    border-color: var(--color-primary);
+
+    /* border */
+    border-color: antiquewhite;
     border-radius: 5vmin !important;
     border-style: dashed;
     border-width: 0.5vmin;
-    padding: 5em;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    height: 90vh;
-    width: 60vw;
+    padding: 5%;
 }
 
 a {
@@ -30,13 +38,12 @@ a {
 
 
 /* Chessboard background */
-body {
-    --chess-size: 80px;
+:root {
     background: repeating-conic-gradient(
-    black 0deg 25%,
-    antiquewhite 25% 50%,
-    black 50% 75%,
-    antiquewhite 75% 100%);
+        var(--chess-color1) 0deg 25%,
+        var(--chess-color2) 25% 50%,
+        var(--chess-color1) 50% 75%,
+        var(--chess-color2) 75% 100%);
     background-size: var(--chess-size) var(--chess-size);
     animation: scroll 4s linear infinite;
 }
